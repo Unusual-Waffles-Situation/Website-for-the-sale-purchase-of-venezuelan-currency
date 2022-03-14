@@ -1,0 +1,105 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h2 {
+      position: absolute;
+      left: 680px;
+  }
+
+  h5 {
+      position: absolute;
+      left: 680px;
+      top: 50px;
+      color: red;
+  }
+  
+  #username {
+      position: absolute;
+      left: 450px;
+      top: 150px;
+  }
+  
+  #password {
+      position: absolute;
+      left: 450px;
+      top: 200px;
+  }
+
+  #password2 {
+    position: absolute;
+    left: 450px;
+    top: 250px;
+}
+  
+  #email {
+      position: absolute;
+      left: 450px;
+      top: 300px;
+  }
+  
+  #usernameText {
+    width: 10%;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    position: absolute;
+    top: 149px;
+    left: 650px;
+  }
+  
+  #passwordText {
+      position: absolute;
+      height: 25px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+      top: 200px;
+      left: 595px;
+  }
+
+  #passwordText2 {
+    position: absolute;
+    height: 25px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+    top: 248px;
+    left: 650px;
+}
+  
+  #emailText {
+      position: absolute;
+      height: 25px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      resize: none;
+      top: 298px;
+      left: 645px;
+  }
+  
+  #whiteBackground {
+      position: absolute;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      height: 400px;
+      top: 145px;
+      width: 25%;
+      left: 550px;
+  }
+  
+  div {
+      position: absolute;
+      left: 150px;
+      width: 100%;
+  }

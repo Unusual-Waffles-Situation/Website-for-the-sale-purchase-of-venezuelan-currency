@@ -1,0 +1,46 @@
+body {
+  background-color: lightblue;
+}
+  
+h2 {
+  position: absolute;
+  left: 550px;
+}
+  
+#logIn {
+  position: absolute;
+  left: 1420px;
+  top: 67px;
+}
+
+#addSale {
+  position: absolute;
+  left: 0px;
+  top: 67px;
+}
+
+#buySale {
+  position: absolute;
+  left: 0px;
+  top: 45px;
+}
+
+#createUser {
+  position: absolute;
+  left: 1420px;
+  top: 43px;
+}
+  
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  position: absolute;
+  top: 100px;
+}
+  

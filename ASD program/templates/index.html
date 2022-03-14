@@ -1,0 +1,62 @@
+<!--To make Django read the css files, it needs to be specified like below (also, to load something in Django, it needs to be on the top of the file): -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = "stylesheet" href = "{% static 'mystyle.css' %}">
+		<title>Página de venta de criptodivisas</title>
+	</head>
+	<body>
+		<h2>Página para compra y venta de criptodivisas</h2>
+
+		{% if user.is_authenticated %}
+			<h3>Bienvenido, {{user.username}}</h3>
+
+		{% else %}
+			<h3>Bienvenido, guest</h3>
+		{% endif %}
+
+		{% if user.is_authenticated %}
+		<form method = "POST" action = "logout">
+			{% csrf_token %}
+			<input id = "logIn" type = "submit" value = "Salir">
+		</form>
+
+		<form method = "POST" action = "add_sale">
+			{% csrf_token %}
+			<input id = "addSale" type = "submit" value = "Agregar oferta">
+		</form>
+
+		<form method = "POST" action = "buy_sale">
+			{% csrf_token %}
+			<input id = "buySale" type = "submit" value = "Comprar/vender oferta">
+		</form>
+
+		{% else %}
+		<form method = "POST" action = "login">
+			{% csrf_token %}
+			<input id = "logIn" type = "submit" value = "Iniciar sesion"/>
+		</form>
+		{% endif %}
+		
+		<form>
+			<!--For in HTML using a list-->
+			<textarea disabled>Ofertas disponibles:
+				{% for sale in sales %}
+{{sale.id}}#	Tipo de oferta: {{sale.type}}
+	Precio de la oferta: {{sale.price}}
+	Fecha de publicación: {{sale.date}}
+	Nombre del usuario: {{sale.username}}
+				&#13;&#10;
+				{% endfor %}
+			</textarea>
+		</form>
+	</body>
+</html>
+
+<!--By default, the form method is GET, which returns everything that is parsed to counter (in this case).
+	POST makes it so the URL is more cleaner, but a CSRF token needs to be added first; just as seen below.-->
+
+<!--{% csrf_token %}-->

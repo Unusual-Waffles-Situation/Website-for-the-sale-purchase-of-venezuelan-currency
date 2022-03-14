@@ -1,0 +1,22 @@
+<h1>Comprar/Vender oferta: </h1>
+
+<form method = "POST" action = "confirmation_screen">
+    <!--For in HTML using a list-->
+    <p>Ofertas disponibles:</p>
+        {% for sale in sales %}
+<p>{{sale.id}}#	Tipo de oferta: {{sale.type}}</p>
+<p>Precio de la oferta: {{sale.price}}</p>
+<p>Fecha de publicación: {{sale.date}}</p>
+<p>Nombre del usuario: {{sale.username}}</p>
+
+        {% if sale.type == "Compra" %}
+            {% csrf_token %}
+            <a class = "btn btn-primary" role = "button" href = "confirmation_screen/{{sale.id}}">Vender</a>
+
+        {% else %}
+            {% csrf_token %}
+            <a class = "btn btn-primary" role = "button" href = "confirmation_screen/{{sale.id}}">Comprar</a>
+        {% endif %}
+        &#13;&#10;
+        {% endfor %}
+</form>
